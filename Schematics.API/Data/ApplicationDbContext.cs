@@ -10,6 +10,7 @@ public class ApplicationDbContext : IdentityDbContext<User>
     public DbSet<SchamaDb> Schamas { get; set; }
     public DbSet<LineDb> Lines { get; set; }
     public DbSet<StationDb> Stations { get; set; }
+    public DbSet<SharedSchemaDb> SharedSchemas { get; set; }
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
     }

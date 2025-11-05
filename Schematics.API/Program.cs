@@ -22,6 +22,14 @@ builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<IBookService, BookService>();
 builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ILineService, LineService>();
+builder.Services.AddScoped<ISchemaService, SchemaService>();
+builder.Services.AddScoped<IStationService, StationService>();
+builder.Services.AddScoped<ILineRepository, LineRepository>();
+builder.Services.AddScoped<ISchamaRepository, SchemaRepository>();
+builder.Services.AddScoped<IStationRepository, StationRepository>();
+builder.Services.AddScoped<ISharedSchemaRepository, SharedSchemaRepository>();
+builder.Services.AddScoped<ISharedSchemaService, SharedSchemaService>();
 
 
 Log.Logger = new LoggerConfiguration()
