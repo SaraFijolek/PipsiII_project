@@ -4,6 +4,7 @@
     {
         public int Id { get; set; }
         public int SchemaId {  get; set; }
+        public ICollection<StationLineDb> StationLines { get; set; } = new List<StationLineDb>();
         public string Name { get; set; }
         public decimal Latitude {  get; set; }
         public decimal Longitude { get; set; }

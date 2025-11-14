@@ -30,6 +30,8 @@ builder.Services.AddScoped<ISchamaRepository, SchemaRepository>();
 builder.Services.AddScoped<IStationRepository, StationRepository>();
 builder.Services.AddScoped<ISharedSchemaRepository, SharedSchemaRepository>();
 builder.Services.AddScoped<ISharedSchemaService, SharedSchemaService>();
+builder.Services.AddScoped<IStationLineRepository, StationLineRepository>();
+builder.Services.AddScoped<ILineCategoryRepository, LineCategoryRepository>();
 
 
 Log.Logger = new LoggerConfiguration()

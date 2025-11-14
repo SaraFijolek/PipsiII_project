@@ -10,5 +10,6 @@
         public decimal PositionY { get; set; }
         public bool IsTransfer { get; set; } = false;
         public string Description { get; set; }
+        public IList<int> LineIds { get; set; } = new List<int>();
     }
 }

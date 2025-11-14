@@ -2,21 +2,22 @@
 using Schematics.API.Data.Repositories;
 using Schematics.API.DTOs.Station;
 
-
 namespace Schematics.API.Service
 {
     public class StationService : IStationService
     {
         private readonly IStationRepository _repository;
+        private readonly IStationLineRepository _stationLineRepository;
 
-        public StationService(IStationRepository repository)
+        public StationService(IStationRepository repository, IStationLineRepository stationLineRepository)
         {
             _repository = repository;
+            _stationLineRepository = stationLineRepository;
         }
 
         public async Task AddStationAsync(AddStation model)
         {
-            var newStation = new StationDb
+            var station = new StationDb
             {
                 SchemaId = model.SchemaId,
                 Name = model.Name,
@@ -28,7 +29,20 @@ namespace Schematics.API.Service
                 Description = model.Description
             };
 
-            await _repository.AddAsync(newStation);
+            await _repository.AddAsync(station);
+
+            if (model.LineIds?.Any() == true)
+            {
+                foreach (var lineId in model.LineIds)
+                {
+                    station.StationLines.Add(new StationLineDb
+                    {
+                        StationId = station.Id,
+                        LineId = lineId
+                    });
+                }
+                await _stationLineRepository.SaveChangesAsync();
+            }
         }
 
         public async Task<IList<StationDto>> GetStationsBySchemaIdAsync(int schemaId)
@@ -65,7 +79,7 @@ namespace Schematics.API.Service
                 station.PositionX = model.PositionX.Value;
             if (model.PositionY.HasValue)
                 station.PositionY = model.PositionY.Value;
-            if (model.IsTransfer.HasValue) 
+            if (model.IsTransfer.HasValue)
                 station.IsTransfer = model.IsTransfer.Value;
             if (!string.IsNullOrEmpty(model.Description))
                 station.Description = model.Description;

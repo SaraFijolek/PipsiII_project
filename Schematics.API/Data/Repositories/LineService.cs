@@ -7,18 +7,24 @@ namespace Schematics.API.Service
     public class LineService : ILineService
     {
         private readonly ILineRepository _repository;
+        private readonly ILineCategoryRepository _lineCategoryRepository;
 
-        public LineService(ILineRepository repository)
+        public LineService(ILineRepository repository, ILineCategoryRepository lineCategoryRepository)
         {
             _repository = repository;
+            _lineCategoryRepository = lineCategoryRepository;
         }
 
         public async Task AddLineAsync(LineDto model)
         {
+            var category = await _lineCategoryRepository.GetByIdAsync(model.LineCategoryId);
+            if (category == null)
+                throw new KeyNotFoundException("Kategoria linii nie istnieje.");
+
             var newLine = new LineDb
             {
                 SchemaId = model.SchemaId,
-                CategoryId = model.CategoryId,
+                LineCategoryId = model.LineCategoryId,
                 Name = model.Name,
                 LineNumber = model.LineNumber,
                 Color = model.Color,
@@ -36,7 +42,7 @@ namespace Schematics.API.Service
             {
                 Id = line.Id,
                 SchemaId = line.SchemaId,
-                CategoryId = line.CategoryId,
+                LineCategoryId = line.LineCategoryId,
                 Name = line.Name,
                 LineNumber = line.LineNumber,
                 Color = line.Color,
@@ -53,7 +59,7 @@ namespace Schematics.API.Service
             {
                 Id = line.Id,
                 SchemaId = line.SchemaId,
-                CategoryId = line.CategoryId,
+                LineCategoryId = line.LineCategoryId,
                 Name = line.Name,
                 LineNumber = line.LineNumber,
                 Color = line.Color,
