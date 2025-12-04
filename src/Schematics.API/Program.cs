@@ -79,19 +79,86 @@ var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
 {
-    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-
-    if (!await roleManager.RoleExistsAsync("Admin"))
-        await roleManager.CreateAsync(new IdentityRole("Admin"));
-}
-
-
-using (var scope = app.Services.CreateScope())
-{
     var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
     if (db.Database.GetPendingMigrations().Any())
         db.Database.Migrate();
+
+    if (!db.Roles.Any(x => x.Name == "Admin"))
+    {
+        await db.Roles.AddAsync(new IdentityRole
+        {
+            Id = "801f7026-3d45-4b6e-8c23-509eedb55be2",
+            ConcurrencyStamp = "NULL",
+            Name = "Admin",
+            NormalizedName = "ADMIN"
+        });
+        await db.SaveChangesAsync();
+    }
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+    string adminEmail = "admin@localhost.pl";
+    string adminPassword = "Test1234!"; 
+
+   
+    if (!await roleManager.RoleExistsAsync("Admin"))
+    {
+        await roleManager.CreateAsync(new IdentityRole("Admin"));
+    }
+
+    var adminUser = await userManager.FindByEmailAsync(adminEmail);
+
+    if (adminUser == null)
+    {
+        adminUser = new User
+        {
+            UserName = adminEmail,
+            Email = adminEmail,
+            EmailConfirmed = true,
+            Firstname = "Admin",   
+            Lastname = "Systemowy",
+            
+        };
+
+        var createResult = await userManager.CreateAsync(adminUser, adminPassword);
+
+        if (!createResult.Succeeded)
+        {
+            Console.WriteLine("B³¹d tworzenia admina:");
+            foreach (var error in createResult.Errors)
+                Console.WriteLine(error.Description);
+        }
+        else
+        {
+            if (!await userManager.IsInRoleAsync(adminUser, "Admin"))
+                await userManager.AddToRoleAsync(adminUser, "Admin");
+
+            Console.WriteLine($"Utworzono admina: {adminEmail}");
+        }
+    }
+    else
+    {
+     
+        var needUpdate = false;
+        if (string.IsNullOrWhiteSpace(adminUser.Firstname)) { adminUser.Firstname = "Admin"; needUpdate = true; }
+        if (string.IsNullOrWhiteSpace(adminUser.Lastname)) { adminUser.Lastname = "Admin"; needUpdate = true; }
+
+        if (needUpdate)
+        {
+            var updateResult = await userManager.UpdateAsync(adminUser);
+            if (!updateResult.Succeeded)
+            {
+                Console.WriteLine("B³¹d aktualizacji admina:");
+                foreach (var error in updateResult.Errors)
+                    Console.WriteLine(error.Description);
+            }
+        }
+
+        if (!await userManager.IsInRoleAsync(adminUser, "Admin"))
+            await userManager.AddToRoleAsync(adminUser, "Admin");
+    }
 }
+
 
 
 if (app.Environment.IsDevelopment())

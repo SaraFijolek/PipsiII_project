@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Schematics.API.Data.Entities;
+using static System.Collections.Specialized.BitVector32;
 
 namespace Schematics.API.Data.Repositories
 {
@@ -29,6 +30,7 @@ namespace Schematics.API.Data.Repositories
         public async Task<StationDb?> GetByIdAsync(int id)
         {
             return await _context.Stations.FirstOrDefaultAsync(s => s.Id == id);
+            
         }
 
         public async Task UpdateAsync(StationDb station)
