@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{A62E8E7B-E1BF-4203-875C-CE4C8AFD77D0}|src\\Schematics.API\\Schematics.API.csproj|solutionrelative:src\\schematics.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A62E8E7B-E1BF-4203-875C-CE4C8AFD77D0}|src\\Schematics.API\\Schematics.API.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\c#\\schematics\\src\\schematics.api\\schematics.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A62E8E7B-E1BF-4203-875C-CE4C8AFD77D0}|src\\Schematics.API\\Schematics.API.csproj|solutionrelative:src\\schematics.api\\schematics.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A62E8E7B-E1BF-4203-875C-CE4C8AFD77D0}|src\\Schematics.API\\Schematics.API.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\c#\\schematics\\src\\schematics.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A62E8E7B-E1BF-4203-875C-CE4C8AFD77D0}|src\\Schematics.API\\Schematics.API.csproj|solutionrelative:src\\schematics.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A62E8E7B-E1BF-4203-875C-CE4C8AFD77D0}|src\\Schematics.API\\Schematics.API.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\c#\\schematics\\src\\schematics.api\\appsettings.docker.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A62E8E7B-E1BF-4203-875C-CE4C8AFD77D0}|src\\Schematics.API\\Schematics.API.csproj|solutionrelative:src\\schematics.api\\appsettings.docker.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A62E8E7B-E1BF-4203-875C-CE4C8AFD77D0}|src\\Schematics.API\\Schematics.API.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\c#\\schematics\\src\\schematics.api\\schematics.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A62E8E7B-E1BF-4203-875C-CE4C8AFD77D0}|src\\Schematics.API\\Schematics.API.csproj|solutionrelative:src\\schematics.api\\schematics.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,17 +26,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Schematics.API",
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\C#\\Schematics\\src\\Schematics.API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "src\\Schematics.API\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\C#\\Schematics\\src\\Schematics.API\\appsettings.Development.json",
+              "RelativeToolTip": "src\\Schematics.API\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-09T12:07:41.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Schematics.API.csproj",
               "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\C#\\Schematics\\src\\Schematics.API\\Schematics.API.csproj",
               "RelativeDocumentMoniker": "src\\Schematics.API\\Schematics.API.csproj",
               "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\C#\\Schematics\\src\\Schematics.API\\Schematics.API.csproj",
               "RelativeToolTip": "src\\Schematics.API\\Schematics.API.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-12-04T16:30:06.448Z",
               "EditorCaption": ""
@@ -45,7 +62,7 @@
               "RelativeDocumentMoniker": "src\\Schematics.API\\appsettings.Docker.json",
               "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\C#\\Schematics\\src\\Schematics.API\\appsettings.Docker.json",
               "RelativeToolTip": "src\\Schematics.API\\appsettings.Docker.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-12-04T15:24:47.449Z",
               "EditorCaption": ""
@@ -58,7 +75,7 @@
               "RelativeDocumentMoniker": "src\\Schematics.API\\Program.cs",
               "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\C#\\Schematics\\src\\Schematics.API\\Program.cs",
               "RelativeToolTip": "src\\Schematics.API\\Program.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAAAK0AAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAE8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-27T13:07:01.711Z",
               "EditorCaption": ""
