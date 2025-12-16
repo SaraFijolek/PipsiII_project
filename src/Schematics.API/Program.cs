@@ -83,8 +83,8 @@ builder.Services
     .AddAuthentication()
     .AddFacebook(options =>
     {
-        options.AppId = "3160401827465182";
-        options.AppSecret = "c4042844f6a6048750f710ddff808c3d";
+        options.AppId = builder.Configuration["Authentication:Facebook:AppId"];
+        options.AppSecret = builder.Configuration["Authentication:Facebook:AppSecret"];
 
         options.Scope.Add("email");
         options.Fields.Add("email");
