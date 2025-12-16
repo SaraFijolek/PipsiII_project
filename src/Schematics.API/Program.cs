@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ using Schematics.API.Data.Repositories;
 using Schematics.API.Service;
 using Schematics.API.Service.Infrastructure;
 using Serilog;
+using System.Security.Claims;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -77,7 +79,19 @@ builder.Services
         };
     });
 
+builder.Services
+    .AddAuthentication()
+    .AddFacebook(options =>
+    {
+        options.AppId = "3160401827465182";
+        options.AppSecret = "c4042844f6a6048750f710ddff808c3d";
 
+        options.Scope.Add("email");
+        options.Fields.Add("email");
+        options.Fields.Add("name");
+
+        options.ClaimActions.MapJsonKey(ClaimTypes.Email, "email");
+    });
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
