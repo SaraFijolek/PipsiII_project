@@ -9,6 +9,9 @@ using Schematics.API.DTOs.Account;
 using Schematics.API.DTOs.Books;
 using Schematics.API.Service;
 using Schematics.API.Service.Infrastructure;
+using System.Security.Claims;
+using System.Text.Json;
+
 
 namespace Schematics.API.Controllers;
 
@@ -75,19 +78,13 @@ public class AccountController : ControllerBase
         return Ok();
     }
 
+    
 
 
 
 
 
 
-
-
-
-
-
-
-   
     [HttpGet("books")]
     public async Task<ActionResult<IList<BookDto>>> GetAllUsers()
     {
