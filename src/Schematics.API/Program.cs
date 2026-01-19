@@ -30,7 +30,7 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
 
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<IBookService, BookService>();
@@ -49,6 +49,44 @@ builder.Services.AddScoped<ILineCategoryRepository, LineCategoryRepository>();
 builder.Services.AddScoped<ISchemaStatisticsRepository, SchemaStatisticsRepository>();
 builder.Services.AddScoped<ISchemaStatisticsService, SchemaStatisticsService>();
 builder.Services.AddScoped<ILogService, LogService>();
+
+builder.Services.AddSwaggerGen(options =>
+{
+options.SwaggerDoc("v1", new OpenApiInfo
+{
+    Title = "",
+    Version = "v1",
+    Description = "ASP.NET 8 REST API",
+    Contact = new OpenApiContact
+    {
+        Name = "Imie Nazwisko",
+        Url = new Uri("https://github.com/projekt")
+    }
+});
+
+options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+{
+    In = ParameterLocation.Header,
+    Description = "Please enter a valid token",
+    Name = "Authorization",
+    Type = SecuritySchemeType.Http,
+    Scheme = "Bearer"
+});
+
+options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "Bearer" }
+            },
+            new string[] { }
+        }
+    });
+});
+
+
+
 
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -121,6 +159,8 @@ Log.Logger = new LoggerConfiguration()
     .WriteTo.File("Logs/logs-.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
+builder.Host.UseSerilog();
+
 
 var app = builder.Build();
 
@@ -129,6 +169,7 @@ using (var scope = app.Services.CreateScope())
     var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
     if (db.Database.GetPendingMigrations().Any())
         db.Database.Migrate();
+
 
     if (!db.Roles.Any(x => x.Name == "Admin"))
     {
@@ -208,11 +249,14 @@ using (var scope = app.Services.CreateScope())
 
 
 
-if (app.Environment.IsDevelopment())
+if (app.Environment.EnvironmentName == "Docker" || app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+
+
 
 app.UseHttpsRedirection();
 app.UseCors("AllowAll");

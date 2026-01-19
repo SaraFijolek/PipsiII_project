@@ -16,6 +16,9 @@ WORKDIR /app
 
 COPY --from=build /app/publish .
 
+RUN mkdir -p /app/Logs
+
+
 EXPOSE 8080
 
 ENTRYPOINT ["dotnet", "Schematics.API.dll"]

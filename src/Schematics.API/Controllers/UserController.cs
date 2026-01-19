@@ -121,10 +121,10 @@ namespace Schematics.API.Controllers
 
 
         [HttpGet("logs")]
-        public async Task<IActionResult> GetLogs([FromQuery] int lines = 200)
+        public async Task<IActionResult> Get([FromQuery] string date, [FromQuery] int lines = 200)
         {
-            var logs = await _logService.ReadLastLinesAsync(lines);
-            return Ok(logs);
+            var content = await _logService.ReadLastLinesAsync(date, lines);
+            return Ok(content);
         }
     }
 }

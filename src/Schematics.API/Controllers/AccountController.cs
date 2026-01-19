@@ -66,7 +66,9 @@ public class AccountController : ControllerBase
         var user = new User
         {
             Email = model.Email,
-            UserName = model.Username
+            UserName = model.Username,
+            Firstname = model.FirstName,
+            Lastname = model.LastName
         };
 
         if (model.Password != model.ConfirmPassword)

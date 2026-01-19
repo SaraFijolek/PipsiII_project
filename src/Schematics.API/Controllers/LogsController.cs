@@ -4,7 +4,7 @@ using Schematics.API.Service;
 
 namespace Schematics.API.Controllers
 {
-    [Authorize(Roles = "Admin")]    
+    [Authorize(Roles = "Admin")]
     [ApiController]
     [Route("admin/logs")]
     public class LogsController : ControllerBase
@@ -17,10 +17,12 @@ namespace Schematics.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get([FromQuery] int lines = 200)
+        public async Task<IActionResult> Get([FromQuery] string date, [FromQuery] int lines = 200)
         {
-            var content = await _logService.ReadLastLinesAsync(lines);
+            var content = await _logService.ReadLastLinesAsync(date, lines);
             return Ok(content);
         }
+
+
     }
 }

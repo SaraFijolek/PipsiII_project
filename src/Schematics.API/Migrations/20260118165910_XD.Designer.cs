@@ -12,8 +12,8 @@ using Schematics.API.Data;
 namespace Schematics.API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251128163156_Test")]
-    partial class Test
+    [Migration("20260118165910_XD")]
+    partial class XD
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

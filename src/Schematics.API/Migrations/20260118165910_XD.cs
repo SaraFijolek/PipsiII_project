@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Schematics.API.Migrations
 {
     /// <inheritdoc />
-    public partial class Test : Migration
+    public partial class XD : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

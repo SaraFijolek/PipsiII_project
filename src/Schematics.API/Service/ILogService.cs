@@ -2,6 +2,6 @@
 {
     public interface ILogService
     {
-        Task<IList<string>> ReadLastLinesAsync(int lines = 200);
+        Task<IList<string>> ReadLastLinesAsync(string date, int lines = 200);
     }
 }
