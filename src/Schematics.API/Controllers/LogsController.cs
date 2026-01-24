@@ -16,13 +16,21 @@ namespace Schematics.API.Controllers
             _logService = logService;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Get([FromQuery] string date, [FromQuery] int lines = 200)
+
+        [HttpGet("{date}")]
+        public async Task<IActionResult> GetLogs(string date, [FromQuery] int lines = 200)
         {
-            var content = await _logService.ReadLastLinesAsync(date, lines);
-            return Ok(content);
+            
+            if (!DateTime.TryParseExact(date, "yyyyMMdd", null,
+                System.Globalization.DateTimeStyles.None, out _))
+            {
+                return BadRequest("Invalid date format. Use yyyyMMdd (e.g., 20250124)");
+            }
+
+            var logs = await _logService.ReadLastLinesAsync(date, lines);
+            return Ok(logs);
+
+
         }
-
-
     }
 }

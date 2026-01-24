@@ -16,7 +16,7 @@ namespace Schematics.API.Data.Repositories
         public async Task<SharedSchemaDb?> GetByIdAsync(int id)
         {
             return await _context.SharedSchemas
-                .Include(s => s.SchemaId)
+                .Include(s => s.Schama)  
                 .Include(s => s.SharedWithUser)
                 .FirstOrDefaultAsync(s => s.Id == id);
         }
@@ -32,7 +32,7 @@ namespace Schematics.API.Data.Repositories
         public async Task<IEnumerable<SharedSchemaDb>> GetSharedWithUserAsync(string userId)
         {
             return await _context.SharedSchemas
-                .Include(s => s.SchemaId)
+                .Include(s => s.Schama)  
                 .Include(s => s.SharedWithUser)
                 .Where(s => s.SharedWithUserId == userId)
                 .ToListAsync();
@@ -41,7 +41,7 @@ namespace Schematics.API.Data.Repositories
         public async Task<IEnumerable<SharedSchemaDb>> GetSharedByOwnerAsync(string ownerId)
         {
             return await _context.SharedSchemas
-                .Include(s => s.SchemaId)
+                .Include(s => s.Schama)  
                 .Include(s => s.SharedWithUser)
                 .Where(s => s.OwnerId == ownerId)
                 .ToListAsync();

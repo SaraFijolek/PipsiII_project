@@ -81,8 +81,8 @@ public class ExternalAuthController : ControllerBase
             }
         }
 
-       
-        var token = _jwtService.CreateToken(user.Id);
+        var roles = await _userManager.GetRolesAsync(user);
+        var token = _jwtService.CreateToken(user.Id,roles);
 
         return Ok(new { access_token = token });
     }

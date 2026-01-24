@@ -7,7 +7,7 @@ using Schematics.API.DTOs.LineCategories;
 
 namespace Schematics.API.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize]
     [ApiController]
     [Route("line-categories")]
     public class LineCategoryController : ControllerBase
@@ -29,7 +29,7 @@ namespace Schematics.API.Controllers
                 Id = c.Id,
                 Name = c.Name,
                 Color = c.Color,
-                Lines = c.Lines
+                
             }).ToList();
 
             return Ok(dto);
@@ -47,7 +47,7 @@ namespace Schematics.API.Controllers
                 Id = category.Id,
                 Name = category.Name,
                 Color = category.Color,
-                Lines = category.Lines
+                
             });
         }
 

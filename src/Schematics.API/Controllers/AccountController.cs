@@ -9,6 +9,7 @@ using Schematics.API.DTOs.Account;
 using Schematics.API.DTOs.Books;
 using Schematics.API.Service;
 using Schematics.API.Service.Infrastructure;
+using System.Data;
 using System.Security.Claims;
 using System.Text.Json;
 
@@ -49,8 +50,8 @@ public class AccountController : ControllerBase
 
         if (result.Succeeded)
         {
-           
-            var token = _tokenService.CreateToken(user.Id);
+            var roles = await _userManager.GetRolesAsync(user);
+            var token = _tokenService.CreateToken(user.Id, roles);
             return Ok(new { access_token = token });
         }
         else
@@ -80,10 +81,30 @@ public class AccountController : ControllerBase
         return Ok();
     }
 
+
+
+
     
 
+    [HttpGet("my-info")]
+    [Authorize]
+    public async Task<IActionResult> GetMyInfo()
+    {
+        var user = await _userManager.GetUserAsync(User);
+        if (user == null) return Unauthorized();
 
+        var roles = await _userManager.GetRolesAsync(user);
+        var claimsFromToken = User.Claims.Select(c => new { c.Type, c.Value });
 
+        return Ok(new
+        {
+            userId = user.Id,
+            email = user.Email,
+            rolesInDatabase = roles,
+            claimsInToken = claimsFromToken,
+            hasAdminRole = User.IsInRole("Admin")
+        });
+    }
 
 
 

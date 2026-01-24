@@ -10,7 +10,6 @@ namespace Schematics.API.DTOs.Lines
         public int LineNumber { get; set; }
         public string Color { get; set; }
         public bool IsCircular { get; set; }
-        public LineCategoryDb LinecaCaterory { get; set; } = null!;
-        public ICollection<StationLineDb> StationLines { get; set; } = new List<StationLineDb>();
+        
     }
 }

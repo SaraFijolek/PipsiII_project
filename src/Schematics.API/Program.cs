@@ -115,7 +115,8 @@ builder.Services
                 Encoding.UTF8.GetBytes(builder.Configuration["JWT:Key"])),
             ValidateIssuer = false,
             ValidateAudience = false,
-            ClockSkew = TimeSpan.Zero
+            ClockSkew = TimeSpan.Zero,
+            RoleClaimType = ClaimTypes.Role
         };
     });
 
