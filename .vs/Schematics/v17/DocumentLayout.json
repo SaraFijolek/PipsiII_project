@@ -1,26 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\C#\\Schematics\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\PipsillFinal\\PipsiII_project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A62E8E7B-E1BF-4203-875C-CE4C8AFD77D0}|src\\Schematics.API\\Schematics.API.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\c#\\schematics\\src\\schematics.api\\controllers\\externalauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A62E8E7B-E1BF-4203-875C-CE4C8AFD77D0}|src\\Schematics.API\\Schematics.API.csproj|solutionrelative:src\\schematics.api\\controllers\\externalauthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF902F7A-46E1-4524-95B7-CB6337CC4FE3}|Test\\Test.csproj|c:\\users\\user\\desktop\\pipsillfinal\\pipsiii_project\\test\\stationlinerepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF902F7A-46E1-4524-95B7-CB6337CC4FE3}|Test\\Test.csproj|solutionrelative:test\\stationlinerepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A62E8E7B-E1BF-4203-875C-CE4C8AFD77D0}|src\\Schematics.API\\Schematics.API.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\c#\\schematics\\src\\schematics.api\\appsettings.docker.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A62E8E7B-E1BF-4203-875C-CE4C8AFD77D0}|src\\Schematics.API\\Schematics.API.csproj|solutionrelative:src\\schematics.api\\appsettings.docker.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A62E8E7B-E1BF-4203-875C-CE4C8AFD77D0}|src\\Schematics.API\\Schematics.API.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\c#\\schematics\\src\\schematics.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A62E8E7B-E1BF-4203-875C-CE4C8AFD77D0}|src\\Schematics.API\\Schematics.API.csproj|solutionrelative:src\\schematics.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A62E8E7B-E1BF-4203-875C-CE4C8AFD77D0}|src\\Schematics.API\\Schematics.API.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\c#\\schematics\\src\\schematics.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A62E8E7B-E1BF-4203-875C-CE4C8AFD77D0}|src\\Schematics.API\\Schematics.API.csproj|solutionrelative:src\\schematics.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A62E8E7B-E1BF-4203-875C-CE4C8AFD77D0}|src\\Schematics.API\\Schematics.API.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\c#\\schematics\\src\\schematics.api\\schematics.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A62E8E7B-E1BF-4203-875C-CE4C8AFD77D0}|src\\Schematics.API\\Schematics.API.csproj|solutionrelative:src\\schematics.api\\schematics.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A62E8E7B-E1BF-4203-875C-CE4C8AFD77D0}|src\\Schematics.API\\Schematics.API.csproj|c:\\users\\user\\desktop\\pipsillfinal\\pipsiii_project\\src\\schematics.api\\data\\entities\\linedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A62E8E7B-E1BF-4203-875C-CE4C8AFD77D0}|src\\Schematics.API\\Schematics.API.csproj|solutionrelative:src\\schematics.api\\data\\entities\\linedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +18,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.Docker.json",
-              "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\C#\\Schematics\\src\\Schematics.API\\appsettings.Docker.json",
-              "RelativeDocumentMoniker": "src\\Schematics.API\\appsettings.Docker.json",
-              "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\C#\\Schematics\\src\\Schematics.API\\appsettings.Docker.json",
-              "RelativeToolTip": "src\\Schematics.API\\appsettings.Docker.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-18T12:46:01.115Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\C#\\Schematics\\src\\Schematics.API\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "src\\Schematics.API\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\C#\\Schematics\\src\\Schematics.API\\appsettings.Development.json",
-              "RelativeToolTip": "src\\Schematics.API\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-18T12:45:58.643Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ExternalAuthController.cs",
-              "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\C#\\Schematics\\src\\Schematics.API\\Controllers\\ExternalAuthController.cs",
-              "RelativeDocumentMoniker": "src\\Schematics.API\\Controllers\\ExternalAuthController.cs",
-              "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\C#\\Schematics\\src\\Schematics.API\\Controllers\\ExternalAuthController.cs",
-              "RelativeToolTip": "src\\Schematics.API\\Controllers\\ExternalAuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFkAAAAAAAAAAAAAAA==",
+              "Title": "StationLineRepositoryTests.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\PipsillFinal\\PipsiII_project\\Test\\StationLineRepositoryTests.cs",
+              "RelativeDocumentMoniker": "Test\\StationLineRepositoryTests.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\PipsillFinal\\PipsiII_project\\Test\\StationLineRepositoryTests.cs",
+              "RelativeToolTip": "Test\\StationLineRepositoryTests.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowC0AAAClAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T12:40:40.853Z",
+              "WhenOpened": "2026-01-19T20:04:24.259Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Schematics.API",
-              "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\C#\\Schematics\\src\\Schematics.API\\Schematics.API.csproj",
-              "RelativeDocumentMoniker": "src\\Schematics.API\\Schematics.API.csproj",
-              "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\C#\\Schematics\\src\\Schematics.API\\Schematics.API.csproj",
-              "RelativeToolTip": "src\\Schematics.API\\Schematics.API.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-18T12:32:26.354Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\C#\\Schematics\\src\\Schematics.API\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "src\\Schematics.API\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\C#\\Schematics\\src\\Schematics.API\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "src\\Schematics.API\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "LineDb.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\PipsillFinal\\PipsiII_project\\src\\Schematics.API\\Data\\Entities\\LineDb.cs",
+              "RelativeDocumentMoniker": "src\\Schematics.API\\Data\\Entities\\LineDb.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\PipsillFinal\\PipsiII_project\\src\\Schematics.API\\Data\\Entities\\LineDb.cs",
+              "RelativeToolTip": "src\\Schematics.API\\Data\\Entities\\LineDb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T12:17:42.621Z",
+              "WhenOpened": "2026-01-21T13:46:19.92Z",
               "EditorCaption": ""
             }
           ]
